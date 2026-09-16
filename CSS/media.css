@@ -7,11 +7,21 @@
     margin-inline: auto;
   }
 
+  /* FIX: theme toggle was fixed at right:120px on every screen size and
+     collided with the hamburger icon (right:20px) on mobile. Pull it in
+     and shrink it so both icons sit side by side without overlapping. */
+  .theme-label {
+    top: 25px;
+    right: 65px;
+    font-size: 20px;
+  }
+
   /* Home Section */
   .home {
     flex-direction: column;
     text-align: center;
-    padding: 80px 0 40px;
+    /* FIX: raised from 80px to comfortably clear the 90px fixed navbar */
+    padding: 100px 0 40px;
   }
 
   .home .container {
@@ -186,11 +196,20 @@
     margin-bottom: 3px;
   }
 
+  /* FIX: .links-wrapper still had display:flex + gap:90px from the base
+     file, so the two <ul> lists needed ~570px of width and overflowed on
+     narrow phones. Stack them and remove the fixed 240px min-width. */
+  .links-wrapper {
+    flex-direction: column;
+    gap: 5px;
+  }
+
   .quick-links ul li a {
     font-size: 12px !important;
     color: #fff !important;
     text-decoration: none;
     display: inline;
+    min-width: auto;
     margin-bottom: 5px;
   }
 
@@ -230,6 +249,13 @@
   .container {
     width: 95% !important;
     margin: auto;
+  }
+
+  /* FIX: same theme/hamburger overlap fix as the small-mobile block. */
+  .theme-label {
+    top: 25px;
+    right: 65px;
+    font-size: 22px;
   }
 
   /* Navbar */
@@ -285,7 +311,9 @@
 
   /* Home */
   .home {
-    padding: 10px;
+    /* FIX: was padding:10px, which sat well below the 90px fixed navbar
+       and hid the top of the hero heading behind it. */
+    padding: 110px 10px 20px;
     text-align: center;
   }
 
@@ -564,6 +592,13 @@
     font-size: 20px;
   }
 
+  /* FIX: same overflow issue as small-mobile - stack the two link
+     columns instead of keeping the 90px gap from the base file. */
+  .links-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .quick-links {
     display: flex;
     flex-wrap: wrap;
@@ -610,13 +645,20 @@
   }
 }
 
-/* ======== larg Tablet & Labtob ======== */
+/* ======== 3. Tablet (769px - 1024px) ======== */
 
 @media (max-width: 1024px) and (min-width: 769px) {
   /* General Container */
   .container {
     width: 95% !important;
     margin: auto;
+  }
+
+  /* FIX: same theme/hamburger overlap fix. */
+  .theme-label {
+    top: 25px;
+    right: 65px;
+    font-size: 22px;
   }
 
   /* Navbar */
@@ -662,13 +704,19 @@
 
   /* Home Section */
   .home {
-    padding: 10px;
+    /* FIX: was padding:10px, hiding the hero heading behind the fixed
+       navbar - same bug as the block above. */
+    padding: 110px 10px 20px;
     text-align: center;
   }
 
-  home .container {
+  /* FIX: was "home .container" (missing the leading dot), so this rule
+     never matched anything and the hero stayed in a row layout instead
+     of stacking on tablet. */
+  .home .container {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
 
   .content-home {
@@ -719,9 +767,12 @@
     margin-top: 15px;
   }
 
+  /* FIX: was 220px here - smaller than the 260px used one breakpoint
+     down (481-768px), so the plate visually shrank as the screen grew.
+     Scaled it up progressively instead. */
   .plate {
-    width: 220px;
-    height: 220px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
     margin-top: 15px;
   }
@@ -767,11 +818,12 @@
     height: 135px;
   }
 
-  Gallery Section */
-
+  /* Gallery Section */
   .gallery-grid {
     display: grid;
-    grid-template-columns: 1r;
+    /* FIX: was "1r" - not a valid CSS unit (should be "1fr"), so the
+       browser dropped the declaration. */
+    grid-template-columns: 1fr;
     gap: 15px;
     grid-template-areas:
       "image-one"
@@ -782,11 +834,6 @@
       "image-six"
       "image-seven";
   }
- 
-  .image-one {
-    width: 50%;
-  }
-
 
   .gallery-item {
     width: 90%;
@@ -795,7 +842,7 @@
     margin-inline: auto;
   }
 
-   .overlay h2 { 
+  .overlay h2 {
     font-size: 20px;
   }
 
@@ -805,7 +852,7 @@
 
   .title-gallery p {
     font-size: 32px;
-  } 
+  }
 
   /* Contact Section */
   .title-contact p {
@@ -920,9 +967,17 @@
     font-size: 18px;
   }
 
+  /* FIX: stack the two link columns here too so they don't rely on the
+     base file's 90px gap on a viewport this narrow. */
+  .links-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .quick-links ul li a {
     font-size: 14px;
     padding: 6px 8px;
+    min-width: auto;
   }
 }
 
@@ -998,7 +1053,10 @@
     width: 48%;
   }
 
-  /* Gallery Section
+  /* FIX: this layout was left commented out, so tablets/small laptops in
+     this range inherited the desktop 12x12 asymmetric grid meant for
+     much wider screens, cramming all 7 photos into a tiny space.
+     Activating a simple 2-column layout instead. */
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -1008,7 +1066,11 @@
       "image-five image-six"
       "image-seven image-seven";
     gap: 15px;
-  } */
+  }
+
+  .gallery-item {
+    aspect-ratio: 4 / 3;
+  }
 
   /* Contact Section */
   .contact-info {

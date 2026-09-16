@@ -228,6 +228,10 @@ a { text-decoration: none; }
     display: flex;
     align-items: center;
     min-height: 100vh;
+    /* FIX: padding-top clears the fixed 90px navbar on every breakpoint so
+       the hero heading is never hidden underneath it (was only handled on
+       mobile before, and even got overridden to 10px on tablet). */
+    padding-top: 90px;
     transition: background 0.5s, color 0.5s;
 }
 
@@ -718,7 +722,9 @@ a { text-decoration: none; }
 .contact-form textarea {
     width: 100%;
     padding: 20px;
-    border: 1px solid var(--color-gray-ligt);
+    /* FIX: was var(--color-gray-ligt) - a typo pointing at an undefined
+       variable, so the border silently fell back to nothing. */
+    border: 1px solid var(--color-gray-light);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
