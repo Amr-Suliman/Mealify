@@ -1,0 +1,1080 @@
+/* ======= 1.(Small Mobile) ========= */
+
+@media (max-width: 480px) {
+  /* Global */
+  .container {
+    width: 92%;
+    margin-inline: auto;
+  }
+
+  /* Home Section */
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 0 40px;
+  }
+
+  .home .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .content-home {
+    padding: 0;
+    width: 100%;
+  }
+
+  .content-home h2 {
+    margin-top: 30px;
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .content-home p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .buttons-home {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-video {
+    width: 80%;
+    max-width: 250px;
+    text-align: center;
+  }
+
+  .btn-video .icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .image-home {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .plate {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  /* Chefs Section */
+  .chefs {
+    margin: 60px 0;
+  }
+
+  .chefs-cards {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .outter-chefs {
+    width: 100%;
+  }
+
+  .title-chefs p {
+    font-size: 28px;
+  }
+
+  /* Gallery Section */
+  .gallery-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .gallery-item {
+    width: 90%;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+  }
+
+  .overlay h2 {
+    font-size: 18px;
+  }
+
+  .overlay p {
+    font-size: 13px;
+  }
+
+  /* Contact Section */
+  .title-contact p {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .map iframe {
+    height: 200px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .btn-send {
+    width: 80%;
+    margin: 20px auto 0;
+    display: block;
+    text-align: center;
+  }
+
+  /* Footer Section */
+  footer {
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .footer-section {
+    width: 100%;
+  }
+
+  .footer-section h3 {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .footer-section p,
+  .footer-section span {
+    font-size: 10px;
+    line-height: 1.2;
+  }
+
+  .social .icons a {
+    margin-inline: 3px;
+    font-size: 13px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+  }
+
+  .quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .quick-links h3 {
+    margin-bottom: 3px;
+  }
+
+  .quick-links ul li a {
+    font-size: 12px !important;
+    color: #fff !important;
+    text-decoration: none;
+    display: inline;
+    margin-bottom: 5px;
+  }
+
+  .contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .contact-form input {
+    width: 100px;
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .btn-send {
+    padding: 10px 10px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    margin-bottom: 30px;
+  }
+
+  .btn-send i {
+    font-size: 12px;
+  }
+}
+
+/* ======  2.(Normal Mobile)  ====== */
+
+@media (max-width: 768px) and (min-width: 481px) {
+  /* General Container */
+  .container {
+    width: 95% !important;
+    margin: auto;
+  }
+
+  /* Navbar */
+  .logo-nav {
+    float: none !important;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu-label {
+    display: block;
+    cursor: pointer;
+    font-size: 22px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .links-nav {
+    float: none !important;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  /* فتح القائمة */
+  .menu-toggle:checked ~ .links-nav {
+    max-height: 500px;
+  }
+
+  .links-nav ul {
+    display: flex; /* أضفتها */
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .links-nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .links-nav ul li a {
+    font-size: 16px;
+    display: block;
+    padding: 8px 0;
+  }
+
+  /* Home */
+  .home {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .home .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .content-home {
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .content-home h2 {
+    font-size: 40px;
+    padding-top: 30px;
+  }
+
+  .content-home p {
+    font-size: 14px;
+  }
+
+  .buttons-home {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-video {
+    width: 100%;
+    max-width: 330px;
+    margin-bottom: 10px;
+  }
+
+  .btn-video .icon {
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+  }
+
+  .image-home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .plate {
+    width: 260px;
+    height: 260px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  /* Chefs */
+
+  .chefs {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    padding: 0 15px;
+  }
+
+  .chefs-cards {
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+  }
+
+  .outter-chefs {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .social-icons {
+    top: 15px;
+    right: 15px;
+  }
+
+  .title-chefs h2 {
+    font-size: 12px;
+  }
+
+  .title-chefs p {
+    font-size: 36px;
+  }
+
+  .inner h3 {
+    font-size: 18px;
+  }
+
+  .inner h4,
+  .inner p {
+    font-size: 13px;
+  }
+
+  .wave svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 140px;
+  }
+
+  /* Gallery */
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+    gap: 15px;
+    grid-template-areas:
+      "image-one"
+      "image-two"
+      "image-three"
+      "image-four"
+      "image-five"
+      "image-six"
+      "image-seven";
+  }
+
+  .gallery-item {
+    width: 85%;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin-inline: auto;
+  }
+
+  .gallery-item img {
+    height: auto;
+  }
+
+  .overlay {
+    padding: 10px;
+  }
+
+  .overlay h2 {
+    font-size: 20px;
+  }
+
+  .overlay p {
+    font-size: 14px;
+  }
+
+  .title-gallery p {
+    font-size: 36px;
+  }
+
+  .title-gallery h2 {
+    font-size: 12px;
+  }
+
+  /* Contact */
+
+  .title-contact h2 {
+    font-size: 14px;
+  }
+
+  .title-contact p {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .map iframe {
+    width: 85%;
+    height: 250px;
+    margin-inline: 40px;
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .info-box {
+    width: 90%;
+    margin-inline: auto;
+    flex-direction: row;
+    text-align: left;
+    padding: 15px;
+  }
+
+  .info-box i {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .info-text h3 {
+    font-size: 16px;
+  }
+
+  .info-text p {
+    font-size: 14px;
+  }
+
+  .contact-form {
+    width: 90%;
+    margin-inline: auto;
+    gap: 12px;
+  }
+
+  .form-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 85%;
+    margin-inline: auto;
+    padding: 15px;
+  }
+
+  .contact-form textarea {
+    min-height: 120px;
+  }
+
+  .btn-send {
+    width: 70%;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  /* Footer */
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .logo {
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+
+  .logo span {
+    font-size: 24px;
+  }
+
+  .footer .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer .social h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .footer .social .line {
+    width: 50%;
+    margin: 8px auto 10px;
+  }
+
+  .footer .social .icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer .social .icons a {
+    margin: 0 8px;
+    font-size: 20px;
+  }
+
+  .quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .quick-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .quick-links ul li a {
+    display: inline-block;
+    padding: 8px 12px;
+    min-width: auto;
+    transition: 0.3s;
+    border-radius: 5px;
+    color: #fff;
+  }
+
+  .quick-links ul li a:hover {
+    background-color: #222;
+    transform: translateY(-2px);
+  }
+
+  .footer-col p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+
+  .footer-col p i {
+    font-size: 20px;
+    color: var(--color-accent);
+    margin: 0;
+  }
+}
+
+/* ======== larg Tablet & Labtob ======== */
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  /* General Container */
+  .container {
+    width: 95% !important;
+    margin: auto;
+  }
+
+  /* Navbar */
+  .logo-nav {
+    float: none !important;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu-label {
+    display: block;
+  }
+
+  .links-nav {
+    float: none !important;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .menu-toggle:checked ~ .links-nav {
+    max-height: 500px;
+  }
+
+  .links-nav ul {
+    padding: 0;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .links-nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .links-nav ul li a {
+    font-size: 16px;
+  }
+
+  /* Home Section */
+  .home {
+    padding: 10px;
+    text-align: center;
+  }
+
+  home .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-home {
+    align-items: center;
+    text-align: center;
+  }
+
+  .image-home img {
+    max-width: 400px;
+  }
+
+  .content-home h2 {
+    font-size: 36px;
+    padding-top: 20px;
+  }
+
+  .content-home p {
+    font-size: 14px;
+  }
+
+  .typing {
+    font-size: 15px;
+  }
+
+  .buttons-home {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-video {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+
+  .btn-video .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .image-home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .plate {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  /* Chefs Section */
+  .chefs {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    padding: 0 15px;
+  }
+
+  .chefs-cards {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .outter-chefs {
+    width: 90%;
+    margin-inline: auto;
+    margin-bottom: 20px;
+  }
+
+  .social-icons {
+    top: 15px;
+    right: 15px;
+  }
+
+  .title-chefs p {
+    font-size: 32px;
+  }
+
+  .inner h3 {
+    font-size: 18px;
+  }
+
+  .inner h4,
+  .inner p {
+    font-size: 13px;
+  }
+
+  .wave svg {
+    height: 135px;
+  }
+
+  Gallery Section */
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1r;
+    gap: 15px;
+    grid-template-areas:
+      "image-one"
+      "image-two"
+      "image-three"
+      "image-four"
+      "image-five"
+      "image-six"
+      "image-seven";
+  }
+ 
+  .image-one {
+    width: 50%;
+  }
+
+
+  .gallery-item {
+    width: 90%;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin-inline: auto;
+  }
+
+   .overlay h2 { 
+    font-size: 20px;
+  }
+
+  .overlay p {
+    font-size: 14px;
+  }
+
+  .title-gallery p {
+    font-size: 32px;
+  } 
+
+  /* Contact Section */
+  .title-contact p {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .map iframe {
+    width: 85%;
+    height: 220px;
+    margin-inline: 70px;
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .info-box {
+    width: 90%;
+    margin-inline: auto;
+    flex-direction: row;
+    text-align: left;
+    padding: 15px;
+  }
+
+  .info-box i {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .info-text h3 {
+    font-size: 16px;
+  }
+
+  .info-text p {
+    font-size: 14px;
+  }
+
+  .contact-form {
+    width: 90%;
+    margin-inline: auto;
+    gap: 12px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 85%;
+    margin-inline: auto;
+    padding: 12px;
+  }
+
+  .contact-form textarea {
+    min-height: 100px;
+  }
+
+  .btn-send {
+    width: 70%;
+    padding: 12px;
+    margin: 10px auto;
+  }
+
+  /* Footer Section */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .logo {
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+
+  .logo span {
+    font-size: 20px;
+  }
+
+  .footer .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer .social h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .footer .social .line {
+    width: 50%;
+    margin: 8px auto 10px;
+  }
+
+  .footer .social .icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer .social .icons a {
+    margin: 0 8px;
+    font-size: 18px;
+  }
+
+  .quick-links ul li a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+}
+
+/* ========  4.(Large Tablet & Small Laptop)  ========= */
+
+@media (max-width: 1200px) and (min-width: 1024px) {
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .links-nav {
+    max-height: none;
+    overflow: visible;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-right: 40px;
+  }
+
+  .menu-label {
+    display: none;
+  }
+
+  /* Home Section */
+  .home .container {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .content-home {
+    text-align: left;
+    flex: 1;
+  }
+
+  .content-home h2 {
+    font-size: 50px;
+  }
+
+  .content-home p {
+    font-size: 16px;
+  }
+
+  .buttons-home {
+    justify-content: start;
+    gap: 15px;
+  }
+
+  .btn-primary,
+  .btn-video {
+    width: auto;
+    padding: 10px 20px;
+  }
+
+  .image-home {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .plate {
+    width: 400px;
+    height: 400px;
+  }
+
+  /* Chefs Section */
+  .chefs-cards {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .outter-chefs {
+    width: 48%;
+  }
+
+  /* Gallery Section
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "image-one image-two"
+      "image-three image-four"
+      "image-five image-six"
+      "image-seven image-seven";
+    gap: 15px;
+  } */
+
+  /* Contact Section */
+  .contact-info {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .map iframe {
+    height: 300px;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* ========= 5. (Large Laptops) ========= */
+@media (max-width: 1440px) and (min-width: 1201px) {
+  /* General Container */
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+
+  /* Home Section */
+  .home .container {
+    gap: 30px;
+  }
+
+  .content-home h2 {
+    font-size: 55px;
+  }
+
+  .content-home p {
+    font-size: 15px;
+  }
+
+  .plate {
+    width: 450px;
+    height: 450px;
+  }
+
+  /* Chefs Section */
+  .chefs-cards {
+    gap: 25px;
+  }
+
+  .outter-chefs {
+    width: 30%;
+  }
+
+  /* Gallery Section */
+  .gallery-grid {
+    gap: 15px;
+  }
+
+  /* Contact Section */
+  .contact-info {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 25px;
+  }
+}
