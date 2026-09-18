@@ -16,6 +16,55 @@
     font-size: 20px;
   }
 
+  /* FIX: .menu-label / .links-nav collapse behavior was only handled in
+     the 481-768px and 769-1024px breakpoints, so on phones narrower than
+     480px the nav links kept the desktop flex-row layout and overlapped
+     the theme toggle / hamburger icon (visible as "Contact" text getting
+     covered by the hamburger lines). Collapsing the links behind the
+     hamburger here fixes it. */
+  .menu-label {
+    display: block;
+    cursor: pointer;
+    font-size: 22px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .links-nav {
+    float: none !important;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .menu-toggle:checked ~ .links-nav {
+    max-height: 500px;
+  }
+
+  .links-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 15px 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .links-nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .links-nav ul li a {
+    font-size: 16px;
+    display: block;
+    padding: 8px 0;
+  }
+
   /* Home Section */
   .home {
     flex-direction: column;
