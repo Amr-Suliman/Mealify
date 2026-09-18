@@ -416,7 +416,7 @@ a { text-decoration: none; }
     transform: translateX(110%);
     opacity: 0;
     transition: transform 0.5s ease, opacity 0.5s ease;
-    transition-delay: 0.8s;
+    transition-delay: 0.4s;
 }
 
 .social-icons a {
